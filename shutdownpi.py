@@ -5,10 +5,11 @@ import os
 # GND = pin 9
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(7, GPIO.IN,pull_up_down=GPIO.PUD_UP)
-GPIO.setup(7, GPIO.IN,pull_up_down=GPIO.PUD_UP)
+GPIO.setup(11, GPIO.IN,pull_up_down=GPIO.PUD_UP)
 while True:
     
     print GPIO.input(7)
+    print GPIO.input(11)
     if(GPIO.input(11) == False):
                 os.system("sudo cp /home/pi/Pictures/config.txt /boot/")
 	time.sleep(3)
